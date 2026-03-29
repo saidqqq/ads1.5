@@ -55,12 +55,14 @@ public class Main {
         System.out.println("Result: " + sumofSquares(n1));
 
         System.out.println("Task 2. Sum of first n array elements");
+        System.out.print("Enter size: ");
+        int k = sc.nextInt();
+        int[] arr = new int[k];
+        System.out.print("Enter array: ");
+        for (int i = 0; i < k; i++) {
+            arr[i] = sc.nextInt();}
         System.out.print("Enter n: ");
         int n2 = sc.nextInt();
-        int[] arr = new int[n2];
-        System.out.print("Enter array: ");
-        for (int i = 0; i < n2; i++) {
-            arr[i] = sc.nextInt();}
         System.out.println("Result: " + sumofNelements(arr, n2));
 
         System.out.println("Task 3. Sum of b powers n");
