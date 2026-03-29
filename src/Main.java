@@ -1,13 +1,42 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Task 1. Sum of Squares n");
+        System.out.print("Enter n: ");
+        int n1 = sc.nextInt();
+        System.out.println("Result: " + task1.sumofSquares(n1));
+
+        System.out.println("Task 2. Sum of first n array elements");
+        System.out.print("Enter n: ");
+        int n2 = sc.nextInt();
+        int[] arr = new int[n2];
+
+        System.out.print("Enter array: ");
+        for (int i = 0; i < n2; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Result: " + task2.sumofNelements(arr, n2));
+
+        System.out.println("Task 3. Sum of b powers n");
+        System.out.print("Enter base b: ");
+        int b = sc.nextInt();
+        System.out.print("Enter power n: ");
+        int n3 = sc.nextInt();
+        System.out.println("Result: " + task3.sumnPower(b, n3));
+
+        System.out.println("Task 4. Reverse sequence(n)");
+        System.out.print("Enter n: ");
+        int n4 = sc.nextInt();
+
+        System.out.print("Enter numbers: ");
+        task4.seqNreverse(n4, sc);
+
+        sc.close();
+    }
+
 }
